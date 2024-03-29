@@ -14,7 +14,8 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin: auto;
       width: 500px;
-      position: relative; /* card를 상대적 위치로 설정 */
+      position: relative; /* 상대적 위치로 설정 */
+     
     }
     .card-header {
       background-color: #87CEFA;
@@ -89,6 +90,9 @@
       font-size: 13px;
       color: grey;
     }
+    .completed span {
+      color: #999; /* 완료된 항목의 텍스트 색상 */
+    }
   </style>
 </head>
 <body>
@@ -100,7 +104,7 @@
           </div>
           <div class="list-group list-group-flush">
             <div class="list-group-item">
-              <input type="text" class="form-control" id="todoInput" placeholder="Enter Your text">
+              <input type="text" class="form-control" id="todoInput" placeholder="Enter Your plan">
               <button class="btn" id="addTodo">+</button>
             </div>
           </div>
@@ -125,6 +129,11 @@
           checkSpan.classList.add('checkmark');
           checkSpan.addEventListener('click', function() {
             item.classList.toggle('completed');
+            if (item.classList.contains('completed')){
+              text.Span.style.color = "#999";
+            }else{
+              textSpan.style.color = "#000";
+            }
           });
       
           var deleteSpan = document.createElement('span');
