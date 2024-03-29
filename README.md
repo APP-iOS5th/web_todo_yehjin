@@ -1,3 +1,3 @@
-|| CodeLion App School 1주차 ||
+|| CodeLion iOS App School 1주차 ||
 
 To-Do List
