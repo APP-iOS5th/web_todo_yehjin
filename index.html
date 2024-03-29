@@ -156,7 +156,7 @@
         }
       }
       
-    // <!-- 현재 날짜와 시간을 업데이트하는 함수 --> 
+    // 현재 날짜와 시간을 업데이트하는 함수
       function updateDateTime() {
         const now = new Date();
         const dateString = now.toLocaleDateString('ko-KR', {
@@ -172,7 +172,7 @@
         document.getElementById('currentTime').innerText = `${dateString} ${timeString}`;
       }
       
-      //<!-- 페이지 로드 시 현재 날짜와 시간 표시 및 1분마다 업데이트해주게설정-->
+      //페이지 로드 시 현재 날짜와 시간 표시 및 1분마다 업데이트해주게설정
       updateDateTime();
       setInterval(updateDateTime, 60000);
       </script>
